@@ -14,10 +14,23 @@
         android:scaleType="centerCrop"
         android:src="@mipmap/background_dark"></ImageView>
 
+    <TextView
+        android:id="@+id/unlockTxtDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="115dp"
+        android:fontFamily="@font/zen_dots"
+        android:lineSpacingExtra="8sp"
+        android:text="Unlock Your Potencial"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/goalGuideDark"
+        app:layout_constraintStart_toStartOf="@+id/goalGuideDark"
+        app:layout_constraintTop_toTopOf="@+id/goalGuideDark" />
+
     <ImageView
         android:id="@+id/goalGuideDark"
-        android:layout_width="384dp"
-        android:layout_height="165dp"
+        android:layout_width="341dp"
+        android:layout_height="140dp"
         android:layout_marginTop="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +41,7 @@
         android:id="@+id/welcomeMesDark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="110dp"
         android:fontFamily="@font/zen_dots"
         android:text="Welcome, Player"
         android:textColor="@color/white"
