@@ -12,23 +12,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@mipmap/background_dark_foggy"></ImageView>
+        android:src="@mipmap/background_dark_foggy"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"></ImageView>
 
     <ImageView
         android:id="@+id/goalGuideDark"
-        android:layout_width="384dp"
-        android:layout_height="165dp"
-        android:layout_marginTop="100dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="241dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/goalguide_dark" />
+        app:srcCompat="@mipmap/logo_dark" />
+
+    <TextView
+        android:id="@+id/unlockTxtDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/zen_dots"
+        android:lineSpacingExtra="8sp"
+        android:text="Unlock Your\nPotencial"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/goalGuideDark"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/goalGuideDark" />
 
     <TextView
         android:id="@+id/welcomeMesDark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/zen_dots"
         android:text="Welcome, Player"
         android:textColor="@color/white"
@@ -55,7 +71,6 @@
         android:id="@+id/noAccDark"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="@font/zen_dots"
         android:paddingTop="1dp"
@@ -65,7 +80,8 @@
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBttDark" />
 
     <Button
         android:id="@+id/loginBttDark"
@@ -99,11 +115,14 @@
         android:paddingTop="15sp"
         android:paddingBottom="15sp"
         android:textAlignment="center"
+        android:textColor="@color/dark_blue_back"
         android:textColorHint="@color/dark_blue_back"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeMesDark" />
+
 
     <EditText
         android:id="@+id/passDark"
@@ -115,15 +134,24 @@
         android:ems="10"
         android:fontFamily="@font/zen_dots"
         android:hint="Enter password"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:paddingTop="15sp"
         android:paddingBottom="15sp"
         android:textAlignment="center"
+        android:textColor="@color/dark_blue_back"
         android:textColorHint="@color/dark_blue_back"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usernameDark" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
