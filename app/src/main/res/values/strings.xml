@@ -19,6 +19,7 @@
     <string name="sign_up">Sign Up</string>
     <string name="enter_email">Enter email</string>
     <string name="create_your_account">Create your account</string>
+    <string name="i_agree_with_the_terms_and_nconditions_of_service">I agree with the Terms and\nConditions of Service *</string>
 
     <array name="countries">
         <item name="Portugal" type="string">Portugal</item>

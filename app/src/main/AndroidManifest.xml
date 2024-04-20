@@ -19,11 +19,11 @@
             android:exported="false" />
         <activity
             android:name="com.example.GoalGuide.MainActivity"
-            android:exported="false"
-            android:label="@string/app_name" />
+            android:exported="false" />
         <activity
             android:name="com.example.GoalGuide.StartActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

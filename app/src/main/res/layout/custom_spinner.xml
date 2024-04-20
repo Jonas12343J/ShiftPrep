@@ -6,7 +6,7 @@
     android:textColor="@color/dark_blue_back"
     android:fontFamily="@font/zen_dots"
     android:textAlignment="center"
-    android:paddingTop="20dp"
-    android:paddingBottom="20dp">
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
 
 </TextView>
