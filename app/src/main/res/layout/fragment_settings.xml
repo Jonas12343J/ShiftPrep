@@ -1,21 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="80dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
 
     <TextView
-        android:id="@+id/text_settings"
-        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Settings"
+        android:textColor="@color/light_blue_title"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:scaleX="1.7"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:srcCompat="@mipmap/settings" />
+
+    <TextView
+        android:id="@+id/notifsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Preferences"
+        android:textColor="@color/light_blue_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/privacyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Privacy"
+        android:textColor="@color/light_blue_title"
+        app:layout_constraintStart_toStartOf="@+id/notifsTxt"
+        app:layout_constraintTop_toBottomOf="@+id/reminderTxt" />
+
+    <TextView
+        android:id="@+id/notifsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Notifications"
+        android:textColor="@color/light_blue_title"
+        app:layout_constraintStart_toStartOf="@+id/notifsText"
+        app:layout_constraintTop_toBottomOf="@+id/dark_modeTxt" />
+
+    <TextView
+        android:id="@+id/softmodeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Soft Mode"
+        android:textColor="@color/blue_texts"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/notifsText"
+        app:layout_constraintTop_toBottomOf="@+id/notifsText" />
+
+    <TextView
+        android:id="@+id/AIcoachesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="AI Coaches"
+        android:textColor="@color/blue_texts"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/softmodeTxt"
+        app:layout_constraintTop_toBottomOf="@+id/softmodeTxt" />
+
+    <TextView
+        android:id="@+id/dark_modeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Dark Mode"
+        android:textColor="@color/blue_texts"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/AIcoachesTxt"
+        app:layout_constraintTop_toBottomOf="@+id/AIcoachesTxt" />
+
+    <TextView
+        android:id="@+id/punishTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/zen_dots"
+        android:text=" (no punishment mode)"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/softmodeTxt"
+        app:layout_constraintStart_toEndOf="@+id/softmodeTxt"
+        app:layout_constraintTop_toTopOf="@+id/softmodeTxt" />
+
+    <TextView
+        android:id="@+id/enable_notifsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Enable Notifications"
+        android:textColor="@color/blue_texts"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/dark_modeTxt"
+        app:layout_constraintTop_toBottomOf="@+id/notifsTxt" />
+
+    <TextView
+        android:id="@+id/reminderTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Remiders"
+        android:textColor="@color/blue_texts"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/enable_notifsTxt"
+        app:layout_constraintTop_toBottomOf="@+id/enable_notifsTxt" />
+
+    <TextView
+        android:id="@+id/termsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Terms and Conditions"
+        android:textColor="@color/blue_texts"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/reminderTxt"
+        app:layout_constraintTop_toBottomOf="@+id/privacyText" />
+
+    <TextView
+        android:id="@+id/feedbackTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Feedback"
+        android:textColor="@color/blue_texts"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/reminderTxt"
+        app:layout_constraintTop_toBottomOf="@+id/termsTxt" />
+
+    <TextView
+        android:id="@+id/accountTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Account"
+        android:textColor="@color/light_blue_title"
+        app:layout_constraintStart_toStartOf="@+id/privacyText"
+        app:layout_constraintTop_toBottomOf="@+id/feedbackTxt" />
+
+    <TextView
+        android:id="@+id/signoutTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Sign out"
+        android:textColor="@color/purple_error"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/feedbackTxt"
+        app:layout_constraintTop_toBottomOf="@+id/accountTxt" />
+
+    <TextView
+        android:id="@+id/delete_accountTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Delete account"
+        android:textColor="@color/purple_error"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/enable_notifsTxt"
+        app:layout_constraintTop_toBottomOf="@+id/signoutTxt" />
+
+    <Switch
+        android:id="@+id/softSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:thumbTint="@color/light_blue_title"
+        android:trackTint="@color/light_blue_title"
+        app:layout_constraintBottom_toBottomOf="@+id/softmodeTxt"
+        app:layout_constraintStart_toEndOf="@+id/punishTxt"
+        app:layout_constraintTop_toTopOf="@+id/softmodeTxt" />
+
+    <Switch
+        android:id="@+id/AISwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/light_blue_title"
+        android:trackTint="@color/light_blue_title"
+        app:layout_constraintBottom_toBottomOf="@+id/AIcoachesTxt"
+        app:layout_constraintStart_toStartOf="@+id/softSwitch"
+        app:layout_constraintTop_toTopOf="@+id/AIcoachesTxt" />
+
+    <Switch
+        android:id="@+id/DarkSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/light_blue_title"
+        android:trackTint="@color/light_blue_title"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/dark_modeTxt"
+        app:layout_constraintStart_toStartOf="@+id/AISwitch"
+        app:layout_constraintTop_toTopOf="@+id/dark_modeTxt" />
+
+    <Switch
+        android:id="@+id/notifsSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/light_blue_title"
+        android:trackTint="@color/light_blue_title"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/enable_notifsTxt"
+        app:layout_constraintStart_toStartOf="@+id/DarkSwitch"
+        app:layout_constraintTop_toTopOf="@+id/enable_notifsTxt" />
+
+    <Switch
+        android:id="@+id/remindersSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/light_blue_title"
+        android:trackTint="@color/light_blue_title"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/reminderTxt"
+        app:layout_constraintStart_toStartOf="@+id/notifsSwitch"
+        app:layout_constraintTop_toTopOf="@+id/reminderTxt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

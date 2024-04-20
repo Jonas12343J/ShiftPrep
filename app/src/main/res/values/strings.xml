@@ -22,11 +22,11 @@
     <string name="i_agree_with_the_terms_and_nconditions_of_service">I agree with the Terms and\nConditions of Service *</string>
 
     <array name="countries">
-        <item name="Portugal" type="string">Portugal</item>
-        <item name="França" type="string">França</item>
-        <item name="Espanha" type="string">Espanha</item>
-        <item name="Italia" type="string">Italia</item>
-        <item name="Inglaterra" type="string">Inglaterra</item>
-        <item name="Polonia" type="string">Polonia</item>
+        <item name="Portugal" type="string">🇵🇹 Portugal</item>
+        <item name="França" type="string">🇫🇷 França</item>
+        <item name="Espanha" type="string">🇪🇸 Espanha</item>
+        <item name="Italia" type="string">🇮🇹 Italia</item>
+        <item name="Inglaterra" type="string">🇬🇧 Inglaterra</item>
+        <item name="Polonia" type="string">🇵🇱 Polonia</item>
     </array>
 </resources>
