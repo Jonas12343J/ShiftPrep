@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Goal Guide</string>
+    <string name="title_home">Home</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_lb">Leaderboard</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--string name="hello_blank_fragment">Hello blank fragment</string -->
+    <string name="friends">Friends</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="unlock_your_npotencial">Unlock Your\nPotencial</string>
+    <string name="welcome_player">Welcome, Player</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign up!</string>
+    <string name="login">Login</string>
+    <string name="enter_username">Enter username</string>
+    <string name="enter_password">Enter password</string>
+    <string name="already_have_an_account_login">Already have an account? Login!</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="enter_email">Enter email</string>
+    <string name="create_your_account">Create your account</string>
+
+    <array name="countries">
+        <item name="Portugal" type="string">Portugal</item>
+        <item name="França" type="string">França</item>
+        <item name="Espanha" type="string">Espanha</item>
+        <item name="Italia" type="string">Italia</item>
+        <item name="Inglaterra" type="string">Inglaterra</item>
+        <item name="Polonia" type="string">Polonia</item>
+    </array>
+</resources>
