@@ -4,19 +4,256 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:alpha="0.7"
     tools:context="com.example.GoalGuide.ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_end="80dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <ImageView
+        android:id="@+id/backLevel"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/rectangle3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="15dp"
+        android:progress="67"
+        android:progressDrawable="@drawable/custom_progress_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/backLevel"
+        app:layout_constraintEnd_toEndOf="@+id/backLevel"
+        app:layout_constraintStart_toStartOf="@+id/backLevel"
+        app:layout_constraintTop_toTopOf="@+id/backLevel"
+        app:layout_constraintVertical_bias="0.43" />
+
+    <TextView
+        android:id="@+id/XPtxt"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/zen_dots"
+        android:text="XP"
+        android:textColor="@color/blue_texts"
+        android:textSize="11dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <ImageView
+        android:id="@+id/avatarBarImg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/profile"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/progressBar"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:tint="@color/blue_texts" />
+
+    <TextView
+        android:id="@+id/levelTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Level. 76"
+        android:textColor="@color/blue_texts"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/progressBar"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/monthlyGoalTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Monthly Goal"
+        android:textColor="@color/light_blue_title"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/backLevel"
+        app:layout_constraintTop_toBottomOf="@+id/backLevel" />
+
+    <ProgressBar
+        android:id="@+id/progressMonth"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:progress="34"
+        android:progressDrawable="@drawable/custom_progress_bar2"
+        app:layout_constraintStart_toStartOf="@+id/monthlyGoalTxt"
+        app:layout_constraintTop_toBottomOf="@+id/monthlyGoalTxt" />
+
+    <TextView
+        android:id="@+id/questsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Quests"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressMonth"
+        app:layout_constraintStart_toEndOf="@+id/progressMonth"
+        app:layout_constraintTop_toTopOf="@+id/progressMonth" />
+
+    <TextView
+        android:id="@+id/xQuestsDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/zen_dots"
+        android:text="13/40"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressMonth"
+        app:layout_constraintEnd_toEndOf="@+id/progressMonth"
+        app:layout_constraintStart_toStartOf="@+id/progressMonth"
+        app:layout_constraintTop_toTopOf="@+id/progressMonth" />
+
+    <TextView
+        android:id="@+id/dailyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/zen_dots"
+        android:text="Daily Goals"
+        android:textColor="@color/light_blue_title"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/monthlyGoalTxt"
+        app:layout_constraintTop_toBottomOf="@+id/progressMonth" />
+
+    <ScrollView
+        android:id="@+id/dailyTasks"
+        android:layout_width="250dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyTxt">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_gray_buttons"
+                android:fontFamily="@font/zen_dots"
+                android:text="Push-Ups\t\t[0/100]"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_blue_back"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_gray_buttons"
+                android:fontFamily="@font/zen_dots"
+                android:text="Curl-Ups\t\t[0/100]"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_blue_back"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_gray_buttons"
+                android:fontFamily="@font/zen_dots"
+                android:text="Squats\t\t[0/100]"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_blue_back"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_gray_buttons"
+                android:fontFamily="@font/zen_dots"
+                android:text="Running\t\t[0/10km]"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_blue_back"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_gray_buttons"
+                android:fontFamily="@font/zen_dots"
+                android:text="Plank\t\t[0/10min]"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_blue_back"
+                android:textSize="12sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_gray_buttons"
+                android:fontFamily="@font/zen_dots"
+                android:text="Burpees\t\t[0/100]"
+                android:textAllCaps="false"
+                android:textColor="@color/dark_blue_back"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/warningTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/zen_dots"
+        android:text="WARNING"
+        android:textColor="@color/purple_error"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+    <TextView
+        android:id="@+id/penaltyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/zen_dots"
+        android:lineSpacingExtra="5sp"
+        android:text="Failing to complete this daily\nquest, will bring a punishment!"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warningTxt" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/danger"
+        app:layout_constraintStart_toStartOf="@+id/dailyTxt"
+        app:layout_constraintTop_toBottomOf="@+id/dailyTasks" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
