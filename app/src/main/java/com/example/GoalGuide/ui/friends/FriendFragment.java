@@ -4,7 +4,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,12 +26,33 @@ public class FriendFragment extends Fragment {
         FriendViewModel friendViewModel = new ViewModelProvider(this).get(FriendViewModel.class);
         View view = inflater.inflate(R.layout.fragment_friends, container, false);
 
-        final TextView textView = view.findViewById(R.id.text_friends);
+        Button requestsBtn = view.findViewById(R.id.requests_button);
+        Button friendsBtn = view.findViewById(R.id.friend_button);
 
-        friendViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        LinearLayout friendsLayout = view.findViewById(R.id.linear_friends);
+        LinearLayout requestsLayout = view.findViewById(R.id.linear_requests);
+
+        ScrollView friend_list = view.findViewById(R.id.friend_list);
+        ScrollView request_list = view.findViewById(R.id.requests_list);
+
+        requestsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChanged(String s) {
-                textView.setText(s);
+            public void onClick(View v) {
+                friend_list.setVisibility(View.GONE);
+                friendsLayout.setVisibility(View.GONE);
+                request_list.setVisibility(View.VISIBLE);
+                requestsLayout.setVisibility(View.VISIBLE);
+            }
+        });
+
+        friendsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                friend_list.setVisibility(View.VISIBLE);
+                friendsLayout.setVisibility(View.VISIBLE);
+                request_list.setVisibility(View.GONE);
+                requestsLayout.setVisibility(View.GONE);
+
             }
         });
 

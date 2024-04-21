@@ -3,6 +3,7 @@ package com.example.GoalGuide;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Button;
 
 import com.example.test.R;
 import com.example.test.databinding.ActivityMainBinding;
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
 
+    private Button profileButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         View trademarkDark = findViewById(R.id.trademark_dark);
+
+        profileButton = findViewById(R.id.profile_button);
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
