@@ -33,6 +33,7 @@
 
     <EditText
         android:id="@+id/name_profile"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -42,6 +43,7 @@
         android:fontFamily="@font/zen_dots"
         android:inputType="text"
         android:text="Americo"
+        android:textAlignment="center"
         android:textColor="@color/dark_blue_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,6 +60,7 @@
         android:fontFamily="@font/zen_dots"
         android:inputType="text"
         android:text="americoesdrubal@gmail.com"
+        android:textAlignment="center"
         android:textColor="@color/dark_blue_back"
         app:layout_constraintEnd_toEndOf="@+id/name_profile"
         app:layout_constraintStart_toStartOf="@+id/name_profile"
@@ -73,7 +76,7 @@
         android:fontFamily="@font/zen_dots"
         android:text="Back"
         android:textAllCaps="false"
-        android:textColor="@color/dark_blue_texts"
+        android:textColor="@color/blue_texts"
         app:layout_constraintBottom_toBottomOf="@+id/save_profile"
         app:layout_constraintEnd_toStartOf="@+id/save_profile"
         app:layout_constraintHorizontal_bias="0.157"
@@ -92,7 +95,7 @@
         android:backgroundTint="@color/light_gray_buttons"
         android:text="Save"
         android:textAllCaps="false"
-        android:textColor="@color/dark_blue_texts"
+        android:textColor="@color/blue_texts"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_password" />
@@ -108,6 +111,7 @@
         android:fontFamily="@font/zen_dots"
         android:inputType="textPassword"
         android:text="americo"
+        android:textAlignment="center"
         android:textColor="@color/dark_blue_back"
         app:layout_constraintEnd_toEndOf="@+id/email_profile"
         app:layout_constraintStart_toStartOf="@+id/email_profile"
@@ -152,7 +156,7 @@
         android:backgroundTint="@color/light_gray_buttons"
         android:text="@string/edit_avatar"
         android:textAllCaps="false"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/blue_texts"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />

@@ -1,6 +1,7 @@
 package com.example.GoalGuide;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -20,7 +21,8 @@ import androidx.navigation.ui.NavigationUI;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-
+    public String username = "";
+    public String email = "";
     private Button profileButton;
 
     @Override
@@ -36,6 +38,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         View trademarkDark = findViewById(R.id.trademark_dark);
+
+        SharedPreferences sharedPref = getSharedPreferences("MyData", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(username, username);
+        editor.putString(email, email);
+        editor.apply();
 
         profileButton = findViewById(R.id.profile_button);
         profileButton.setOnClickListener(new View.OnClickListener() {

@@ -251,7 +251,7 @@
         android:id="@+id/imageView7"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:src="@mipmap/danger"
         app:layout_constraintStart_toStartOf="@+id/dailyTxt"
         app:layout_constraintTop_toBottomOf="@+id/dailyTasks" />

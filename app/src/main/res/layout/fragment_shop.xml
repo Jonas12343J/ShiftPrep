@@ -22,8 +22,8 @@
         app:layout_constraintGuide_end="80dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="300dp"
-        android:layout_height="150dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:gravity="center"
 
         app:layout_constraintBottom_toTopOf="@+id/guideline7"
@@ -38,45 +38,33 @@
             android:layout_marginTop="15dp"
             android:fontFamily="@font/zen_dots"
             android:gravity="center"
-            android:text="Unlock Your Potencial"
+            android:text="Coming to you soon...."
             android:textColor="@color/blue_texts"
-            android:textSize="20dp"
+            android:textSize="28dp"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp"
             tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/shopMessage"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/zen_dots"
-            android:gravity="center"
-            android:text=" You do not have permissions to join the store yet! Level up and surpass your limits"
-            android:textColor="@color/blue_texts"
-            android:textSize="10sp"
-            app:layout_constraintEnd_toEndOf="@+id/shopTitle"
-            app:layout_constraintStart_toStartOf="@+id/shopTitle"
-            app:layout_constraintTop_toBottomOf="@+id/shopTitle" />
-
         <Button
-            android:id="@+id/shopButton"
+            android:id="@+id/lvlUp"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:alpha="0.9"
             android:background="@mipmap/rectangle"
             android:fontFamily="@font/zen_dots"
             android:padding="10dp"
             android:text="Level Up!"
+            android:textStyle="bold"
             android:textAllCaps="false"
             android:textColor="@color/blue_texts"
             android:textIsSelectable="false"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:backgroundTint="@color/light_gray_buttons"
-            app:layout_constraintEnd_toEndOf="@+id/shopMessage"
-            app:layout_constraintStart_toStartOf="@+id/shopMessage"
-            app:layout_constraintTop_toBottomOf="@+id/shopMessage" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shopTitle" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -88,11 +88,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/countryDark" />
 
+
     <EditText
         android:id="@+id/usernameDark"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:alpha="0.7"
         android:background="@mipmap/rectangle2"
         android:ems="10"
@@ -106,10 +107,8 @@
         android:textColorHint="@color/dark_blue_back"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createTxt" />
-
 
     <EditText
         android:id="@+id/passDark"
