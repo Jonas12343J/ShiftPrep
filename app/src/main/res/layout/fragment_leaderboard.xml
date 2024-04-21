@@ -6,17 +6,983 @@
     android:layout_height="match_parent"
     tools:context="com.example.GoalGuide.ui.leaderboard.LeaderboardFragment">
 
-    <TextView
-        android:id="@+id/text_leaderboard"
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="80dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <ScrollView
+        android:id="@+id/scrollViewLeaderboard"
+        android:layout_width="410dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Harper Greene"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage" />
+
+                <ImageView
+                    android:id="@+id/playerImage"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_icon2"
+                    app:layout_constraintEnd_toStartOf="@+id/playerName"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition"
+                    android:layout_width="20dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="4"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage" />
+
+                <TextView
+                    android:id="@+id/playerScore"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="674 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName"
+                    app:layout_constraintStart_toEndOf="@+id/playerName"
+                    app:layout_constraintTop_toTopOf="@+id/playerName"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName1"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Declan Ramirez"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage1" />
+
+                <ImageView
+                    android:id="@+id/playerImage1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_girl"
+                    app:layout_constraintEnd_toStartOf="@+id/playerName1"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition1"
+                    android:layout_width="17dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="5"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage1"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage1" />
+
+                <TextView
+                    android:id="@+id/playerScore1"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="480 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName1"
+                    app:layout_constraintStart_toEndOf="@+id/playerName1"
+                    app:layout_constraintTop_toTopOf="@+id/playerName1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName2"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Maya Patel"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage2" />
+
+                <ImageView
+                    android:id="@+id/playerImage2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_icon2"
+                    app:layout_constraintEnd_toStartOf="@+id/playerName2"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition2"
+                    android:layout_width="17dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="6"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage2"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage2" />
+
+                <TextView
+                    android:id="@+id/playerScore2"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="300 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName2"
+                    app:layout_constraintStart_toEndOf="@+id/playerName2"
+                    app:layout_constraintTop_toTopOf="@+id/playerName2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName3"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Elijah Chang"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage3" />
+
+                <ImageView
+                    android:id="@+id/playerImage3"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_girl"
+                    app:layout_constraintEnd_toStartOf="@+id/playerName3"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition3"
+                    android:layout_width="17dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="7"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage3"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage3" />
+
+                <TextView
+                    android:id="@+id/playerScore3"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="267 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName3"
+                    app:layout_constraintStart_toEndOf="@+id/playerName3"
+                    app:layout_constraintTop_toTopOf="@+id/playerName3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName4"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Stella Thompson"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage4" />
+
+                <ImageView
+                    android:id="@+id/playerImage4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_icon2"
+                    app:layout_constraintEnd_toStartOf="@+id/playerName4"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition4"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition4"
+                    android:layout_width="17dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="8"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage4"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage4" />
+
+                <TextView
+                    android:id="@+id/playerScore4"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="224 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName4"
+                    app:layout_constraintStart_toEndOf="@+id/playerName4"
+                    app:layout_constraintTop_toTopOf="@+id/playerName4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName5"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Lucas Rodriguez"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage5" />
+
+                <ImageView
+                    android:id="@+id/playerImage5"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_girl"
+
+                    app:layout_constraintEnd_toStartOf="@+id/playerName5"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition5"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition5"
+                    android:layout_width="17dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="9"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage5"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage5" />
+
+                <TextView
+                    android:id="@+id/playerScore5"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="111 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName5"
+                    app:layout_constraintStart_toEndOf="@+id/playerName5"
+                    app:layout_constraintTop_toTopOf="@+id/playerName5"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName6"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Mateo Rivera"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage6" />
+
+                <ImageView
+                    android:id="@+id/playerImage6"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_icon2"
+                    app:layout_constraintEnd_toStartOf="@+id/playerName6"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition6"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="10"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage6"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage6" />
+
+                <TextView
+                    android:id="@+id/playerScore6"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="111 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName6"
+                    app:layout_constraintStart_toEndOf="@+id/playerName6"
+                    app:layout_constraintTop_toTopOf="@+id/playerName6"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName7"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Evelyn Chen"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage7" />
+
+                <ImageView
+                    android:id="@+id/playerImage7"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_girl"
+
+                    app:layout_constraintEnd_toStartOf="@+id/playerName7"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition7"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition7"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="11"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage7"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage7" />
+
+                <TextView
+                    android:id="@+id/playerScore7"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="111 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName7"
+                    app:layout_constraintStart_toEndOf="@+id/playerName7"
+                    app:layout_constraintTop_toTopOf="@+id/playerName7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName8"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Jackson Miller"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage8" />
+
+                <ImageView
+                    android:id="@+id/playerImage8"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_icon2"
+                    app:layout_constraintEnd_toStartOf="@+id/playerName8"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition8"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition8"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="12"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage8"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage8" />
+
+                <TextView
+                    android:id="@+id/playerScore8"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="111 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName8"
+                    app:layout_constraintStart_toEndOf="@+id/playerName8"
+                    app:layout_constraintTop_toTopOf="@+id/playerName8"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName9"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Sofia Anderson"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage9" />
+
+                <ImageView
+                    android:id="@+id/playerImage9"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_girl"
+
+                    app:layout_constraintEnd_toStartOf="@+id/playerName9"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition9"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition9"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="13"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage9"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage9" />
+
+                <TextView
+                    android:id="@+id/playerScore9"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="111 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName9"
+                    app:layout_constraintStart_toEndOf="@+id/playerName9"
+                    app:layout_constraintTop_toTopOf="@+id/playerName9"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName10"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Isla Bennett "
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage10" />
+
+                <ImageView
+                    android:id="@+id/playerImage10"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_icon2"
+                    app:layout_constraintEnd_toStartOf="@+id/playerName10"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition10"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition10"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="14"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage10"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage10" />
+
+                <TextView
+                    android:id="@+id/playerScore10"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="111 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName10"
+                    app:layout_constraintStart_toEndOf="@+id/playerName10"
+                    app:layout_constraintTop_toTopOf="@+id/playerName10"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/playerName11"
+                    android:layout_width="165dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="152dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="Liam Khan"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage11"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage11" />
+
+                <ImageView
+                    android:id="@+id/playerImage11"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@mipmap/avatar_girl"
+
+                    app:layout_constraintEnd_toStartOf="@+id/playerName11"
+                    app:layout_constraintStart_toEndOf="@+id/playerPosition11"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/playerPosition11"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="15"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerImage11"
+                    app:layout_constraintEnd_toStartOf="@+id/playerImage11"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/playerImage11" />
+
+                <TextView
+                    android:id="@+id/playerScore11"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="70dp"
+                    android:fontFamily="@font/zen_dots"
+                    android:gravity="center_vertical"
+                    android:text="111 XP"
+                    android:textColor="@color/blue_texts"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/playerName11"
+                    app:layout_constraintStart_toEndOf="@+id/playerName11"
+                    app:layout_constraintTop_toTopOf="@+id/playerName11"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/winnerLayout"
+        android:layout_width="106dp"
+        android:layout_height="211dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewLeaderboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <ImageView
+            android:id="@+id/winnerView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="11dp"
+            android:src="@mipmap/avatar_icon2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/winnerPosition"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/winnerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/zen_dots"
+            android:gravity="center"
+            android:text="CR7"
+            android:textColor="@color/blue_texts"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/winnerView"
+            app:layout_constraintStart_toStartOf="@+id/winnerView"
+            app:layout_constraintTop_toBottomOf="@+id/winnerView" />
+
+        <TextView
+            android:id="@+id/winnerPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/zen_dots"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#FFD700"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/winnerView"
+            app:layout_constraintEnd_toEndOf="@+id/winnerView"
+            app:layout_constraintStart_toStartOf="@+id/winnerView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/winnerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/zen_dots"
+            android:gravity="center"
+            android:text="10000"
+            android:textColor="@color/blue_texts"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/winnerName"
+            app:layout_constraintStart_toStartOf="@+id/winnerName"
+            app:layout_constraintTop_toBottomOf="@+id/winnerName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/winnerLayout2"
+        android:layout_width="106dp"
+        android:layout_height="211dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerLayout"
+        app:layout_constraintEnd_toStartOf="@+id/winnerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/winnerLayout">
+
+        <ImageView
+            android:id="@+id/winnerView2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="11dp"
+            android:src="@mipmap/avatar_icon2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/winnerPosition2"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/winnerName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/zen_dots"
+            android:gravity="center"
+            android:text="Messi"
+            android:textColor="@color/blue_texts"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="@+id/winnerView2"
+            app:layout_constraintStart_toStartOf="@+id/winnerView2"
+            app:layout_constraintTop_toBottomOf="@+id/winnerView2" />
+
+        <TextView
+            android:id="@+id/winnerPosition2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/zen_dots"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#C0C0C0"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/winnerView2"
+            app:layout_constraintEnd_toEndOf="@+id/winnerView2"
+            app:layout_constraintStart_toStartOf="@+id/winnerView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/winnerScore2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/zen_dots"
+            android:gravity="center"
+            android:text="9000"
+            android:textColor="@color/blue_texts"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/winnerName2"
+            app:layout_constraintStart_toStartOf="@+id/winnerName2"
+            app:layout_constraintTop_toBottomOf="@+id/winnerName2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/winnerLayout3"
+        android:layout_width="106dp"
+        android:layout_height="211dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/winnerLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/winnerLayout"
+        app:layout_constraintTop_toTopOf="@+id/winnerLayout">
+
+        <ImageView
+            android:id="@+id/winnerView3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="11dp"
+            android:src="@mipmap/avatar_icon2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/winnerPosition3"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/winnerName3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/zen_dots"
+            android:gravity="center"
+            android:text="Joni"
+            android:textColor="@color/blue_texts"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toEndOf="@+id/winnerView3"
+            app:layout_constraintStart_toStartOf="@+id/winnerView3"
+            app:layout_constraintTop_toBottomOf="@+id/winnerView3" />
+
+        <TextView
+            android:id="@+id/winnerPosition3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/zen_dots"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#CD7F32"
+            android:textSize="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/winnerView3"
+            app:layout_constraintEnd_toEndOf="@+id/winnerView3"
+            app:layout_constraintStart_toStartOf="@+id/winnerView3"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/winnerScore3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/zen_dots"
+            android:gravity="center"
+            android:text="7500"
+            android:textColor="@color/blue_texts"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/winnerName3"
+            app:layout_constraintStart_toStartOf="@+id/winnerName3"
+            app:layout_constraintTop_toBottomOf="@+id/winnerName3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

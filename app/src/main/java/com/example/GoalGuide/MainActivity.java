@@ -2,6 +2,7 @@ package com.example.GoalGuide;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.test.R;
 import com.example.test.databinding.ActivityMainBinding;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.trademarkDark.navView, navController);
+
     }
 
 
