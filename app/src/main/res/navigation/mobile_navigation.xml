@@ -25,9 +25,5 @@
         android:name="com.example.GoalGuide.ui.settings.SettingsFragment"
         tools:layout="@layout/fragment_settings"/>
 
-    <fragment
-        android:id="@+id/navigation_friends"
-        android:name="com.example.GoalGuide.ui.friends.FriendFragment"
-        tools:layout="@layout/fragment_friends"/>
 
 </navigation>

@@ -42,7 +42,7 @@
     <ScrollView
         android:background="@color/light_gray_buttons"
         android:id="@+id/friend_list"
-        android:visibility="invisible"
+        android:visibility="visible"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginEnd="25dp"
@@ -54,7 +54,7 @@
 
         <LinearLayout
             android:id="@+id/linear_friends"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -176,7 +176,7 @@
     <ScrollView
         android:background="@color/light_gray_buttons"
         android:id="@+id/requests_list"
-        android:visibility="visible"
+        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginEnd="25dp"
@@ -188,7 +188,7 @@
 
         <LinearLayout
             android:id="@+id/linear_requests"
-            android:visibility="visible"
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
