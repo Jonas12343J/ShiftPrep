@@ -219,7 +219,7 @@
                     android:fontFamily="@font/zen_dots"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="Jackson Thompson"
+                    android:text="Jackson Smith"
                     android:textColor="@color/blue_texts"
                     android:textSize="10sp"/>
 
@@ -294,7 +294,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="7dp"
-                    android:layout_marginStart="35dp"
+                    android:layout_marginStart="25dp"
                     android:scaleX="0.8"
                     android:scaleY="0.8">
 
