@@ -20,6 +20,10 @@
     <string name="enter_email">Enter email</string>
     <string name="create_your_account">Create your account</string>
     <string name="i_agree_with_the_terms_and_nconditions_of_service">I agree with the Terms and\nConditions of Service *</string>
+    <string name="edit_avatar">Edit avatar</string>
+    <string name="password">Password</string>
+    <string name="e_mail">E-mail</string>
+    <string name="name">Name</string>
 
     <array name="countries">
         <item name="Portugal" type="string">🇵🇹 Portugal</item>
